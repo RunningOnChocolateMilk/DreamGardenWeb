@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-dg-background text-dg-primaryText;
+  }
+}
+
+@layer components {
+  .dg-card {
+    @apply bg-dg-cardBackground rounded-2xl shadow-lg border border-dg-shadow/10;
+  }
+  
+  .dg-button-primary {
+    @apply bg-gradient-to-r from-dg-primary to-dg-primaryLight text-white font-medium px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-200;
+  }
+  
+  .dg-button-secondary {
+    @apply bg-dg-cardBackground text-dg-primary border border-dg-primary/20 font-medium px-6 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  .dg-input {
+    @apply bg-dg-cardBackground border border-dg-shadow/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-dg-primary/50 focus:border-dg-primary transition-all duration-200;
+  }
+  
+  .dg-gradient-text {
+    @apply bg-gradient-to-r from-dg-primary to-dg-primaryLight bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
